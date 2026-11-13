@@ -1,0 +1,47 @@
+# File Index
+
+Complete list of files in this foundation package.
+
+- `01-product/personas-and-apps.md`
+- `01-product/product-overview.md`
+- `01-product/requirements.md`
+- `01-product/v1-scope.md`
+- `02-domain/domain-overview.md`
+- `02-domain/lifecycle-rules.md`
+- `02-domain/time-money-attendance.md`
+- `03-architecture/backend-architecture.md`
+- `03-architecture/identity-and-authorization.md`
+- `03-architecture/monorepo-and-tooling.md`
+- `03-architecture/multi-tenancy.md`
+- `03-architecture/system-architecture.md`
+- `04-api/README.md`
+- `04-api/api-guidelines.md`
+- `04-api/endpoint-capability-map.md`
+- `05-database/database-standards.md`
+- `05-database/tenant-data-classification.md`
+- `06-admin/README.md`
+- `06-admin/admin-architecture.md`
+- `06-admin/admin-experience.md`
+- `06-mobile/app-experience.md`
+- `06-mobile/design-system.md`
+- `06-mobile/mobile-architecture.md`
+- `07-infrastructure/deployment-and-environments.md`
+- `07-infrastructure/operations-and-recovery.md`
+- `07-infrastructure/security-and-privacy.md`
+- `08-quality/testing-and-acceptance.md`
+- `09-delivery/README.md`
+- `09-delivery/ai-development-workflow.md`
+- `09-delivery/implementation-roadmap.md`
+- `09-delivery/technical-pocs.md`
+- `10-decisions/ADR/README.md`
+- `10-decisions/decision-register.md`
+- `CONTRIBUTING.md`
+- `README.md`
+- `diagrams/deployment.mmd`
+- `diagrams/domain-context.mmd`
+- `diagrams/monorepo.mmd`
+- `diagrams/subscription-lifecycle.mmd`
+- `diagrams/tenant-request-flow.mmd`
+- `foundation-manifest.json`
+- `templates/adr-template.md`
+- `templates/feature-spec-template.md`

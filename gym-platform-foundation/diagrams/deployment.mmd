@@ -1,0 +1,18 @@
+flowchart TB
+  GH["GitHub Actions"]
+  GHCR["GHCR image registry"]
+  VPS["VPS"]
+  CADDY["Caddy reverse proxy"]
+  API["NestJS API + pg-boss workers"]
+  ADMIN["SolidJS + Vite Admin static assets"]
+  DB["PostgreSQL + PostGIS"]
+  R2["Cloudflare R2"]
+  CF["Cloudflare DNS / edge"]
+  GH --> GHCR
+  GH -->|"Restricted SSH deployment"| VPS
+  GHCR -->|"Pull immutable image"| VPS
+  CF --> CADDY
+  CADDY --> API
+  CF --> ADMIN
+  API --> DB
+  API --> R2

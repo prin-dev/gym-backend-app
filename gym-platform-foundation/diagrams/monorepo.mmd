@@ -1,0 +1,13 @@
+flowchart TB
+  ROOT["gym-backend-app repository"]
+  ROOT --> FRONTEND["Root application: SolidJS + Vite Platform Admin"]
+  ROOT --> BACKEND["gym-backend/: NestJS modular monolith"]
+  FRONTEND -->|HTTP API / approved contracts| BACKEND
+  ROOT --> ROOTPKG["Root package.json and pnpm-lock.yaml"]
+  BACKEND --> BACKPKG["Backend package.json and independently managed pnpm lockfile"]
+  FUTURE["Future KMP mobile project"]
+  FUTURE -. "separate placement/build decision; Gradle and Xcode" .-> BACKEND
+  FOUNDATION["Gym Platform Foundation documentation"]
+  FOUNDATION -. governs .-> FRONTEND
+  FOUNDATION -. governs .-> BACKEND
+  FOUNDATION -. governs future mobile .-> FUTURE

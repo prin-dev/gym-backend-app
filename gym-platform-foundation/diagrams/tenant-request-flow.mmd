@@ -1,0 +1,19 @@
+sequenceDiagram
+  participant Client
+  participant API as NestJS
+  participant Auth as Better Auth
+  participant Authz as Authorization
+  participant DB as PostgreSQL + RLS
+
+  Client->>API: Request + Bearer token + org selector
+  API->>Auth: Validate session
+  Auth-->>API: Global user identity
+  API->>Authz: Check org relationship + permission
+  Authz-->>API: Authorized
+  API->>DB: Begin transaction
+  API->>DB: SET LOCAL tenant context
+  API->>DB: Tenant-scoped query
+  DB->>DB: Apply RLS policy
+  DB-->>API: Scoped result
+  API->>DB: Commit
+  API-->>Client: Response

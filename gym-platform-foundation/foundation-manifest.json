@@ -1,0 +1,26 @@
+{
+  "name": "gym-platform-foundation",
+  "version": "1.1.1-draft",
+  "type": "documentation-only",
+  "generated_files": 44,
+  "openapi_status": "Not yet generated; generated from backend after implementation and review.",
+  "development_sequence": [
+    "Review and maintain foundation specifications",
+    "Implement gym-backend (NestJS) and validate technical POCs",
+    "Generate and approve Better Auth and Gym Business OpenAPI contracts",
+    "Implement the root SolidJS + Vite Platform Admin frontend using approved backend capabilities",
+    "Build Android baseline, migrate shared logic to KMP, and implement native iOS experiences",
+    "Reassess repository structure only when mobile or genuinely shared packages are introduced"
+  ],
+  "target_architecture": {
+    "repository": "Single Git repository with independently managed root frontend and nested backend applications",
+    "applications": [
+      "Root: SolidJS + Vite Platform Admin",
+      "gym-backend/: NestJS modular monolith",
+      "Future KMP mobile project: placement to be decided when implementation begins"
+    ],
+    "workspace_manager": "pnpm used independently per JavaScript application; no pnpm workspace",
+    "task_orchestration": "Native Vite and NestJS scripts; root scripts provide backend aliases; no Turborepo",
+    "mobile_build_system": "Gradle and Xcode remain authoritative; mobile is not part of current repository bootstrap"
+  }
+}

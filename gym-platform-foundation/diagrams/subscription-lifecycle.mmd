@@ -1,0 +1,11 @@
+stateDiagram-v2
+  [*] --> PendingPayment
+  PendingPayment --> Scheduled: First payment confirmed / future start
+  PendingPayment --> Active: First payment confirmed / start reached
+  Scheduled --> Active: Start date reached
+  Active --> Expired: End date reached
+  PendingPayment --> Terminated: Membership terminated
+  Scheduled --> Terminated: Membership terminated
+  Active --> Terminated: Membership terminated
+  Expired --> [*]
+  Terminated --> [*]

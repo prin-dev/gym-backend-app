@@ -1,0 +1,25 @@
+flowchart TB
+  User["Global User"]
+  Org["Organization / Tenant"]
+  Branch["Branch"]
+  Membership["Organization Membership"]
+  Subscription["Subscription"]
+  Plan["Subscription Plan"]
+  Payment["Payment"]
+  Attendance["Attendance"]
+  Profile["Personal Fitness Profile"]
+  Workout["Workout Sessions"]
+  Exercise["Global Exercise Catalogue"]
+
+  Org --> Branch
+  Org --> Plan
+  Org --> Membership
+  User --> Membership
+  Membership --> Subscription
+  Plan -. "terms snapshot at assignment" .-> Subscription
+  Subscription --> Payment
+  Membership --> Attendance
+  Branch --> Attendance
+  User --> Profile
+  User --> Workout
+  Workout --> Exercise

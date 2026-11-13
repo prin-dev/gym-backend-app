@@ -1,0 +1,25 @@
+{
+  "name": "gym-platform",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "dev:api": "npm --dir gym-backend start:dev",
+    "build:api": "npm --dir gym-backend build",
+    "test:api": "npm --dir gym-backend test",
+    "test:e2e:api": "npm --dir gym-backend test:e2e"
+  },
+  "devDependencies": {
+    "solid-devtools": "^0.34.3",
+    "typescript": "^5.7.2",
+    "vite": "^7.1.4",
+    "vite-plugin-solid": "^2.11.8"
+  },
+  "dependencies": {
+    "solid-js": "^1.9.5"
+  }
+}
